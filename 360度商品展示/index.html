@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+</head>
+<body>
+<canvas id="fullview_canvas"></canvas>
+<button onClick="canvas.doPlay()">自动播放</button>
+<button onClick="canvas.stopPlay()">停止播放</button>
+
+<script src="./360Rotate.js"></script>
+<script>
+  let el = document.querySelector('#fullview_canvas');
+let srcArr = new Array()
+for(var i=1; i<60; i++)
+{
+    srcArr[i] ="images/" + i + ".png";
+}
+let canvas = new RotaCanvas(el,421,500,srcArr);
+</script>
+</body>
+</html>
