@@ -1,0 +1,129 @@
+.robot{
+    background-color:#0081AF ;
+    color: #fff;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .desc{
+            width: 70%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .btn{
+            width: 200px;
+            line-height: 30px;
+            background-color: #fff;
+            color: #0081AF;  
+            text-align: center; 
+            margin:10px ;     
+            &:hover{
+                color: #fff;
+                background-color: #003865;
+            }    
+        }
+    }
+
+    .full{
+        .container{
+            width: 70%;
+            margin: 0 auto;
+            .scroll-area{
+                position: relative;
+                padding-bottom: 60px;
+                .bg-img{
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    margin-top: 150px;
+                }
+
+                .bullets-nav{
+                    position: fixed;
+                    width: 20px;
+                    height: 200px;
+                    top: 30%;
+                    right: 10%;
+                    .bullet{
+                        width: 15px;
+                        height: 15px;
+                        border: 1px solid #fff;
+                        border-radius: 100%;
+                        margin-bottom: 10px;
+                        &.active{
+                            background-color: #fff;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            background-color: #fff;
+                        }
+                    }
+                }
+
+                .suspend-ball{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 336px;
+                    height: 336px;
+                    border-radius: 100%;
+                    text-align: center;
+                    background-color: #fff;
+                    overflow-wrap: break-word;
+                    color: #333;
+                    overflow: hidden;
+                    // transform: scale(0);
+                    span{
+                        width: 86%;
+                        font-size: 14px;
+                    }
+                    &.item-one{
+                        top: 0;
+                        left: 0;
+                    }
+                    &.item-two{
+                        top: 10%;
+                        right: 0;
+                    }
+                    &.item-three{
+                        top: 30%;
+                        left: 0;
+                    }
+                    &.item-four{
+                        top: 43%;
+                        right: 0;
+                    }
+                    &.item-five{
+                        top: 63%;
+                        left: 0;
+                    }
+                    &.item-six{
+                        bottom: 2%;
+                        right: 0;
+                    }
+
+                   
+                   
+                    
+                }
+
+
+            }
+        }
+    }
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+	

@@ -1,0 +1,111 @@
+.robot {
+  background-color: #0081AF;
+  color: #fff;
+}
+.robot .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.robot .header .desc {
+  width: 70%;
+  text-align: center;
+  margin: 20px 0;
+}
+.robot .header .btn {
+  width: 200px;
+  line-height: 30px;
+  background-color: #fff;
+  color: #0081AF;
+  text-align: center;
+  margin: 10px ;
+}
+.robot .header .btn:hover {
+  color: #fff;
+  background-color: #003865;
+}
+.robot .full .container {
+  width: 70%;
+  margin: 0 auto;
+}
+.robot .full .container .scroll-area {
+  position: relative;
+  padding-bottom: 60px;
+}
+.robot .full .container .scroll-area .bg-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 150px;
+}
+.robot .full .container .scroll-area .bullets-nav {
+  position: fixed;
+  width: 20px;
+  height: 200px;
+  top: 30%;
+  right: 10%;
+}
+.robot .full .container .scroll-area .bullets-nav .bullet {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.robot .full .container .scroll-area .bullets-nav .bullet.active {
+  background-color: #fff;
+}
+.robot .full .container .scroll-area .bullets-nav .bullet:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+.robot .full .container .scroll-area .suspend-ball {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 336px;
+  height: 336px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #fff;
+  overflow-wrap: break-word;
+  color: #333;
+  overflow: hidden;
+}
+.robot .full .container .scroll-area .suspend-ball span {
+  width: 86%;
+  font-size: 14px;
+}
+.robot .full .container .scroll-area .suspend-ball.item-one {
+  top: 0;
+  left: 0;
+}
+.robot .full .container .scroll-area .suspend-ball.item-two {
+  top: 10%;
+  right: 0;
+}
+.robot .full .container .scroll-area .suspend-ball.item-three {
+  top: 30%;
+  left: 0;
+}
+.robot .full .container .scroll-area .suspend-ball.item-four {
+  top: 43%;
+  right: 0;
+}
+.robot .full .container .scroll-area .suspend-ball.item-five {
+  top: 63%;
+  left: 0;
+}
+.robot .full .container .scroll-area .suspend-ball.item-six {
+  bottom: 2%;
+  right: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
