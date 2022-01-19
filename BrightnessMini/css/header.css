@@ -1,0 +1,59 @@
+.brightness .header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 60px;
+}
+.brightness .header .logo {
+  width: 200px ;
+  transition: all 0.2s;
+}
+.brightness .header .logo a {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  overflow: hidden;
+}
+.brightness .header .logo a img {
+  height: 40px;
+  margin-right: 10px;
+}
+.brightness .header .content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+.brightness .header .content .tool {
+  width: 60px;
+  line-height: 60px;
+  cursor: pointer;
+}
+.brightness .header .content .nav {
+  display: flex;
+  align-items: center;
+}
+.brightness .header .content .nav .item {
+  width: 100px ;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
+.brightness .header .content .right {
+  background-color: unset;
+}
+.brightness .header .content .right .layui-nav-bar {
+  display: none;
+}
+.brightness .header .content .right .item {
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+.brightness .header .content .right .item.user {
+  width: 100px;
+}

@@ -1,0 +1,49 @@
+/*
+ * @Author: Brightness
+ * @Date: 2022-01-13 15:17:53
+ * @LastEditors: Brightness
+ * @LastEditTime: 2022-01-14 09:25:50
+ * @Description:  主题样式
+ */
+
+.brightness{
+    // 头部
+    .header{
+        background-color: var(--color-primary);
+        color: #fff;
+        .logo{
+            a{
+                h1{
+                    color: #fff;
+                }
+            }
+        }
+        .content{
+            .nav{
+                .item{
+                    &.active{
+                        background-color: var(--color-second);
+                    }
+                }
+            }
+        }
+    }
+    //导航
+    .layui-nav{
+        background-color: var(--color-second);
+        .layui-nav-itemed{
+            .layui-nav-child{
+                background-color: var(--color-three) !important;
+            }
+        }
+    }
+    .layui-nav-tree .layui-nav-child dd.layui-this,
+    .layui-nav-tree .layui-nav-child dd.layui-this a,
+    .layui-nav-tree .layui-this, 
+    .layui-nav-tree .layui-this>a, 
+    .layui-nav-tree .layui-this>a:hover{
+            background-color: #fff;
+            color: var(--color-three);
+    }
+    
+}

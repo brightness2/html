@@ -1,0 +1,31 @@
+/*
+ * @Author: Brightness
+ * @Date: 2022-01-13 15:17:53
+ * @LastEditors: Brightness
+ * @LastEditTime: 2022-01-14 09:25:50
+ * @Description:  主题样式
+ */
+.brightness .header {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.brightness .header .logo a h1 {
+  color: #fff;
+}
+.brightness .header .content .nav .item.active {
+  background-color: var(--color-second);
+}
+.brightness .layui-nav {
+  background-color: var(--color-second);
+}
+.brightness .layui-nav .layui-nav-itemed .layui-nav-child {
+  background-color: var(--color-three) !important;
+}
+.brightness .layui-nav-tree .layui-nav-child dd.layui-this,
+.brightness .layui-nav-tree .layui-nav-child dd.layui-this a,
+.brightness .layui-nav-tree .layui-this,
+.brightness .layui-nav-tree .layui-this > a,
+.brightness .layui-nav-tree .layui-this > a:hover {
+  background-color: #fff;
+  color: var(--color-three);
+}

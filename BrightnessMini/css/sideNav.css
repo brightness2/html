@@ -1,0 +1,11 @@
+.brightness .layui-nav-side {
+  width: 222px;
+  top: 60px;
+}
+.brightness .layui-nav-side i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+.brightness .layui-nav-side span.layui-nav-bar {
+  background-color: #fff;
+}

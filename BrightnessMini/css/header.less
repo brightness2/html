@@ -1,0 +1,67 @@
+.brightness{
+
+    .header{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        height: 60px;
+        .logo{
+            width:200px ;
+            transition: all .2s;
+            a{
+                display: flex;
+                align-items: center;
+                height: 60px;
+                overflow: hidden;
+                img{
+                    height: 40px;
+                    margin-right: 10px;
+                }
+            }
+           
+        }
+        .content{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-left: 40px;
+
+            .tool{
+                width: 60px;
+                line-height: 60px;
+                cursor: pointer;
+            }
+            .nav{
+                display: flex;
+                align-items: center;
+                .item{
+                    width:100px ;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    cursor: pointer;
+                   
+                }
+            }
+
+            .right{
+                background-color: unset;
+                .layui-nav-bar{
+                    display: none;
+                }
+                .item{
+                    width: 60px;
+                    text-align: center;
+                    cursor: pointer;
+                    &.user{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
