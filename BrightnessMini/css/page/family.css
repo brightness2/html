@@ -1,0 +1,82 @@
+.networkSetting {
+  position: relative;
+  height: 96vh;
+}
+.networkSetting .infoBox {
+  position: absolute;
+  width: fit-content;
+  z-index: 10;
+}
+.networkSetting .infoBox .title {
+  background-color: #6399c8;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+.networkSetting .infoBox .content {
+  min-height: 100px;
+  min-width: 200px;
+  background-color: #ebf4fb;
+}
+.networkSetting .infoBox .content .image {
+  text-align: center;
+  padding: 20px;
+}
+.networkSetting .infoBox .content .list {
+  display: flex;
+  text-align: center;
+}
+.networkSetting .infoBox .content .list .item {
+  width: 100px;
+  margin: 10px;
+}
+.networkSetting .infoBox .content .list .item i {
+  font-size: 30px;
+}
+.networkSetting .infoBox.internet {
+  bottom: 10px;
+  left: 0;
+}
+.networkSetting .infoBox.route {
+  bottom: 10px;
+  left: 300px;
+}
+.networkSetting .infoBox.wireless {
+  bottom: 330px;
+  left: 588px;
+}
+.networkSetting .infoBox.wired {
+  bottom: 10px;
+  left: 700px;
+}
+.networkSetting .line {
+  position: absolute;
+  z-index: 9;
+  height: 2px;
+  background-color: #aaa;
+}
+.networkSetting .line.vertical {
+  transform-origin: left;
+  transform: rotate(90deg);
+}
+.networkSetting .line.one {
+  width: 100px;
+  bottom: 60px;
+  left: 200px;
+}
+.networkSetting .line.two {
+  width: 200px;
+  bottom: 386px;
+  left: 390px;
+}
+.networkSetting .line.three {
+  width: 200px;
+  bottom: 387px;
+  left: 389px;
+}
+.networkSetting .line.four {
+  width: 200px;
+  bottom: 56px;
+  left: 500px;
+}

@@ -1,0 +1,9 @@
+.search-box {
+  margin-top: 20px;
+}
+.search-box .layui-input {
+  width: 120px;
+}
+#arpForm {
+  padding: 20px;
+}

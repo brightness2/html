@@ -16,7 +16,9 @@ layui.define([
             
             //监听Tab切换，以改变地址hash值
             element.on('tab(admin-tab)', function(){
-                location.hash =  this.getAttribute('lay-id');
+                let href = this.getAttribute('lay-id');
+                location.hash = href ;
+                
             });
             //菜单点击
             $('.brightness').on('click','[admin-herf]',function(){

@@ -1,0 +1,97 @@
+
+.networkSetting{
+    position: relative;
+    height: 96vh;
+    .infoBox{
+        position: absolute;
+        width:fit-content;
+        z-index: 10;
+        .title{
+            background-color: #6399c8;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .content{
+            min-height: 100px;
+            min-width: 200px;
+            background-color: #ebf4fb;
+
+            .image{
+                text-align: center;
+                padding: 20px;
+            }
+
+            .list{
+                display: flex;
+                text-align: center;
+
+                .item{
+                    width: 100px;
+                    margin: 10px;
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        &.internet{
+            bottom: 10px;
+            left: 0;
+        }
+
+        &.route{
+            bottom: 10px;
+            left: 300px;
+        }
+
+        &.wireless{
+            bottom: 330px;
+            left: 588px;
+        }
+
+        &.wired{
+            bottom: 10px;
+            left: 700px;
+        }
+    }
+
+    .line{
+        position: absolute;
+        z-index: 9;
+        height: 2px;
+        background-color: #aaa;
+
+        &.vertical{
+            transform-origin: left;
+            transform: rotate(90deg);
+        }
+
+        &.one{
+            width: 100px;
+            bottom: 60px;
+            left: 200px;
+        }
+
+        &.two{
+            width: 200px;
+            bottom: 386px;
+            left: 390px;
+        }
+
+        &.three{
+            width: 200px;
+            bottom: 387px;
+            left: 389px;
+        }
+
+        &.four{
+            width: 200px;
+            bottom: 56px;
+            left: 500px;
+        }
+    }
+}

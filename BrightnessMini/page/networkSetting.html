@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络配置</title>
+    <link rel="stylesheet" href="../lib/layui-2.6.8/css/layui.css">
+    <link rel="stylesheet" href="../css/brightness.css">
+    <link rel="stylesheet" href="../css/themes/default.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/page/networkSetting.css">
+</head>
+<body>
+    <div class="warp">
+        <form id="networkSettingForm" class="layui-form" action="">
+            <div class="layui-form-item require">
+                <label class="layui-form-label">连接类型</label>
+                <div class="layui-input-block">
+                    <select name="type" lay-verify="required">
+                        <option value="0">PPP0E拨号上网</option>
+                        <option value="1">动态IP</option>
+                        <option value="2">静态态IP</option>
+                      </select>
+                </div>
+            </div>
+            <div class="layui-form-item require">
+                <label class="layui-form-label">用户名称</label>
+                <div class="layui-input-block">
+                  <input type="text" name="name" required  lay-verify="required" placeholder="请填写用户名称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item require">
+                <label class="layui-form-label">用户密码</label>
+                <div class="layui-input-block">
+                  <input type="text" name="password" required  lay-verify="required" placeholder="请填写用户密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item require">
+                <label class="layui-form-label">MAC地址</label>
+                <div class="layui-input-block">
+                  <input type="text" name="mac" required  lay-verify="required" placeholder="请填写MAC地址" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item require">
+                <label class="layui-form-label">外网宽带</label>
+                <div class="layui-input-inline">
+                    <div class="flex">
+                        <input type="number" name="low" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                        <span>KByte(千字节)</span>
+                    </div>
+                    <div class="flex">
+                         <input type="number" name="heigh" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                         <span>KByte(千字节)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">线路侦测</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="open" lay-skin="switch" lay-text="开启|关闭">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block flex">
+                    <button class="layui-btn" lay-submit lay-filter="networkSettingSubmit">提交设置</button>
+                    <button type="reset" class="layui-btn reset">取消设置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../lib/layui-2.6.8/layui.js"></script>
+    <script src="../js/layui-config.js"></script>
+    <script src="../js/page/networkSetting.js"></script>
+</body>
+</html>

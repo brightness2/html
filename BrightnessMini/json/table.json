@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 2,
+    "data": [{
+        "id":1,
+        "desc":"DESKTOP-101917",
+        "ip":"192.168.0.60",
+        "mac":"1C:69:7A:A7:05:04",
+        "interface":"局域网",
+        "type":"静态",
+        "status":"正常",
+        "tips":""
+
+        },
+        {
+            "id":2,
+            "desc":"DESKTOP-101917",
+            "ip":"192.168.0.61",
+            "mac":"1C:69:7A:A7:05:02",
+            "interface":"局域网",
+            "type":"动态",
+            "status":"正常",
+            "tips":""
+
+        }
+    ]
+} 

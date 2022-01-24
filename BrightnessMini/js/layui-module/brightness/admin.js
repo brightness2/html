@@ -37,6 +37,7 @@ layui.define(['jquery','menu','adminTab','layer'], function(exports) {
         error:function(str){
             layer.msg(str,{icon:2})
         }
+
     }
 
     exports('admin',admin);

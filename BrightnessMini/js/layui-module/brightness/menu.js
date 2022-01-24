@@ -5,9 +5,7 @@
  * @LastEditTime: 2022-01-14 15:38:18
  * @Description:  菜单模块
  */
-layui.define([
-    "element" ,"jquery"
-], function(exports) {
+layui.define(["element" ,"jquery"], function(exports) {
     var element = layui.element,
         $ = layui.$;
     var menu = {
@@ -52,13 +50,29 @@ layui.define([
         },
         //监听
         listen:function(){
-            //头部菜单点击
-           $('body').on('click','[data-menu]',function(){
+
+             //头部菜单点击
+            $('body').on('click','[data-menu]',function(){
                 $('.brightness .header .nav .item').removeClass('active');
                 let menuId = $(this).attr('data-menu');
                 $(this).addClass('active');
                 menu.renderSideMenu(menu.menuList[menuId].child);
-           });
+            });
+
+            //监听url变化
+            function urlChange(){
+                function hashChangeFire(){
+                    let hash = location.hash.slice(1);
+                    let p = document.querySelector(`[admin-herf="${hash}"]`);
+                    p&&p.click();
+                }
+
+                if(("onhashchange" in window) && ((typeof document.documentMode==="undefined") || (document.documentMode==8)) ){
+                    window.onhashchange = hashChangeFire;
+                }
+            }
+            urlChange();
+            //
         }
     };
     exports("menu", menu);

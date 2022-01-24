@@ -5,27 +5,63 @@
  * @LastEditTime: 2022-01-14 09:25:50
  * @Description:  主题样式
  */
-.brightness .header {
+.header {
   background-color: var(--color-primary);
   color: #fff;
 }
-.brightness .header .logo a h1 {
+.header .logo a h1 {
   color: #fff;
 }
-.brightness .header .content .nav .item.active {
+.header .content .nav .item.active {
   background-color: var(--color-second);
 }
-.brightness .layui-nav {
+.layui-nav {
   background-color: var(--color-second);
 }
-.brightness .layui-nav .layui-nav-itemed .layui-nav-child {
+.layui-nav .layui-nav-itemed .layui-nav-child {
   background-color: var(--color-three) !important;
 }
-.brightness .layui-nav-tree .layui-nav-child dd.layui-this,
-.brightness .layui-nav-tree .layui-nav-child dd.layui-this a,
-.brightness .layui-nav-tree .layui-this,
-.brightness .layui-nav-tree .layui-this > a,
-.brightness .layui-nav-tree .layui-this > a:hover {
+.layui-nav-tree .layui-nav-child dd.layui-this,
+.layui-nav-tree .layui-nav-child dd.layui-this a,
+.layui-nav-tree .layui-this,
+.layui-nav-tree .layui-this > a,
+.layui-nav-tree .layui-this > a:hover {
   background-color: #fff;
   color: var(--color-three);
+}
+.layui-tab .layui-tab-title .layui-this {
+  color: var(--color-primary);
+}
+.layui-tab .layui-tab-title .layui-tab-close:hover {
+  background-color: var(--color-second);
+}
+.layui-btn {
+  background-color: var(--color-second);
+}
+.layui-btn i {
+  margin-right: 10px;
+}
+.layui-btn.layui-btn-danger {
+  background-color: #ff5722;
+}
+.layui-form-select dl dd.layui-this {
+  background-color: var(--color-second);
+}
+.layui-form-checked[lay-skin=primary] i {
+  border-color: var(--color-second) !important;
+  background-color: var(--color-second);
+}
+.layui-form-checkbox[lay-skin=primary]:hover i {
+  border-color: var(--color-second);
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+  background-color: var(--color-second);
+}
+.layui-laypage input:focus,
+.layui-laypage select:focus {
+  border-color: var(--color-second) !important;
+}
+.layui-form-onswitch {
+  background-color: var(--color-second);
+  border-color: var(--color-second);
 }

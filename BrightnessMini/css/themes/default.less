@@ -6,7 +6,7 @@
  * @Description:  主题样式
  */
 
-.brightness{
+
     // 头部
     .header{
         background-color: var(--color-primary);
@@ -45,5 +45,56 @@
             background-color: #fff;
             color: var(--color-three);
     }
+
+    //页面tab
+    .layui-tab{
+        .layui-tab-title{
+            .layui-this{
+                color:var(--color-primary)
+            }
+            .layui-tab-close:hover{
+                background-color: var(--color-second);
+            }
+        }
+    }
     
-}
+    //按钮
+    .layui-btn{
+        background-color:var(--color-second) ;
+        i{
+            margin-right: 10px;
+        }
+        &.layui-btn-danger{
+            background-color: #ff5722;
+        }
+    }
+
+    //选择框
+    .layui-form-select dl dd{
+        &.layui-this{
+            background-color:var(--color-second); 
+        }
+    }
+
+    //复选框
+    .layui-form-checked[lay-skin=primary] i{
+        border-color: var(--color-second) !important;
+        background-color: var(--color-second);
+    }
+    .layui-form-checkbox[lay-skin=primary]:hover i{
+        border-color:var(--color-second);
+    }
+
+    //分页
+    .layui-laypage .layui-laypage-curr .layui-laypage-em{
+        background-color: var(--color-second);
+    }
+    .layui-laypage input:focus, .layui-laypage select:focus{
+        border-color: var(--color-second) !important;
+    }
+
+    //开关
+    .layui-form-onswitch{
+        background-color: var(--color-second);
+        border-color: var(--color-second);
+    }

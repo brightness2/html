@@ -1,7 +1,7 @@
 :root{
-    --color-primary:#f0311e;
-    --color-second:#f8650f;
-    --color-three:#fe8e03;
+    --color-primary:#005db3;
+    --color-second:#0077e6;
+    --color-three:#02a7f0;
 }
 body {
     padding:0;
@@ -9,4 +9,28 @@ body {
 }
 div{
     box-sizing: border-box;
+}
+
+.hide{
+    display: none;
+}
+.warp{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.layui-form-item.require{
+   .layui-form-label{
+       &::after{
+           content: '*';
+           color: red;
+           padding: 4px;
+       }
+   }
+}
+
+ul,ol,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
