@@ -30,3 +30,11 @@ layui.use(["layer", "jquery", "carousel"], () => {
         }
     });
 });
+
+
+let mobileBtn = document.querySelector('#mobile-btn');
+let mobileNavEl = document.querySelector('#mobile-nav');
+mobileBtn.addEventListener('click',function(){
+    mobileBtn.classList.toggle('active');
+    mobileNavEl.classList.toggle('active');
+});

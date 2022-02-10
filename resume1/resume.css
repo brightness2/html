@@ -240,6 +240,79 @@ body {
 .call .list .item .desc {
   color: var(--color-desc);
 }
+#mobile-nav {
+  position: fixed;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  transition: 0.5s;
+  top: -382px;
+  z-index: 1000;
+}
+#mobile-nav .nav {
+  margin-top: 70px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#mobile-nav .nav a {
+  color: inherit;
+}
+#mobile-nav .nav .item {
+  border-bottom: 1px solid #aaa;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+#mobile-nav .nav .item:hover {
+  color: ;
+}
+#mobile-nav.active {
+  top: 0;
+  box-shadow: 1px 4px 20px #aaa;
+}
+#mobile-btn {
+  display: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  top: 4%;
+  left: 10px;
+  z-index: 1000;
+}
+#mobile-btn .line {
+  position: absolute;
+  left: 20%;
+  transition: 0.5s;
+  transform-origin: left;
+  width: 22px;
+  height: 3px;
+  background-color: #333;
+}
+#mobile-btn .line.one {
+  top: 30%;
+}
+#mobile-btn .line.two {
+  top: 50%;
+}
+#mobile-btn .line.three {
+  top: 70%;
+}
+#mobile-btn.active .line.one {
+  transform: rotate(45deg);
+}
+#mobile-btn.active .line.two {
+  opacity: 0;
+}
+#mobile-btn.active .line.three {
+  transform: rotate(-45deg);
+}
 /***********媒体查询******************/
 @media screen and (max-width: 992px) {
   .nav.big {
@@ -253,10 +326,13 @@ body {
     z-index: 1000;
     width: 100%;
   }
-  .content {
-    margin-top: 90px;
-  }
   .project .list {
     justify-content: center;
+  }
+  #mobile-nav {
+    display: flex;
+  }
+  #mobile-btn {
+    display: block;
   }
 }
