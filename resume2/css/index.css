@@ -1,0 +1,246 @@
+:root {
+  --color-primary: #febd01;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.hide {
+  display: none;
+}
+div,
+span,
+p {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+.warp {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+#pc-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #8d9095;
+}
+#pc-header .warp {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pc-header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+#pc-header ul.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+#pc-header ul.nav .item {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#pc-header ul.nav .item:hover {
+  color: var(--color-primary) !important;
+}
+#pc-header ul.nav .item.active {
+  color: var(--color-primary) !important;
+}
+#pc-header.fixed {
+  background-color: #e6e7e7;
+  animation: headerPull 0.2s;
+}
+#pc-header.fixed .logo {
+  color: #000;
+}
+#pc-header.fixed ul.nav .item {
+  color: #444;
+}
+@keyframes headerPull {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 0;
+  }
+}
+#photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../img/bg.webp');
+  color: #fff;
+}
+#photo .image {
+  text-align: center;
+}
+#photo .image .name {
+  padding: 10px 0;
+}
+#mobile-nav {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  padding: 20px;
+  transition: all 0.2s;
+}
+#mobile-nav .show-nav,
+#mobile-nav .close-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
+#mobile-nav.active {
+  width: 100vw;
+  background-color: #cc0033;
+}
+#mobile-nav.active .content {
+  display: block;
+}
+#mobile-nav .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  display: none;
+}
+#mobile-nav .content .nav .item {
+  min-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+#myself {
+  padding-top: 50px;
+}
+#myself .title {
+  margin-bottom: 30px;
+}
+#myself .title h1 {
+  font-size: 44px;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+#myself .title h1::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 160px;
+  max-width: 160px;
+  background-color: #f7eccb;
+}
+#myself .title .desc {
+  color: #828282;
+}
+#myself .content {
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+}
+#myself .content .image {
+  max-width: 390px;
+}
+#myself .content .image img {
+  width: 100%;
+}
+#myself .content .box {
+  padding-left: 40px;
+}
+#myself .content .box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+#myself .content .box strong {
+  display: block;
+  margin-bottom: 10px;
+}
+#myself .content .box p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #828282;
+  margin-bottom: 30px;
+}
+#myself .content .box .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+}
+#myself .content .box .info .item {
+  display: flex;
+  width: 80%;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+}
+#myself .content .box .info .item label {
+  font-weight: bold;
+}
+#time {
+  background-color: #f5f8fd;
+}
+#time .title-box {
+  text-align: center;
+  margin: 20px 0;
+}
+#time .title-box .title {
+  width: fit-content;
+  border-bottom: 4px solid #f7eccb;
+  margin: 0 auto;
+}
+#time .title-box .desc {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #828282;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  #mobile-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .warp {
+    width: 100%;
+  }
+  #pc-header {
+    display: none;
+  }
+  #mobile-nav {
+    display: block;
+  }
+  #myself .content {
+    grid-template-columns: 1fr;
+  }
+  #myself .content .box {
+    padding-left: 0;
+  }
+  #myself .content .box .info {
+    grid-template-columns: 1fr;
+  }
+  #myself .content .box .info .item {
+    width: 100%;
+  }
+}

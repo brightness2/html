@@ -10,12 +10,12 @@ layui.use(["layer", "jquery", "carousel"], () => {
         carousel = layui.carousel,
         $ = layui.jquery;
 
-    carousel.render({
-        elem: "#lunbo-carousel",
-        width: "100%", //设置容器宽度
-        height: "56vw",
-        arrow: "always", //始终显示箭头
-    });
+    // carousel.render({
+    //     elem: "#lunbo-carousel",
+    //     width: "100%", //设置容器宽度
+    //     height: "56vw",
+    //     arrow: "always", //始终显示箭头
+    // });
 
     $(window).scroll(function () {
         //为了保证兼容性，这里取两个值，哪个有值取哪一个

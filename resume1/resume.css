@@ -44,7 +44,7 @@ body {
   background-image: url("image/banner.jpg");
   background-size: cover;
   background-attachment: scroll;
-  background-position: 0% 0%;
+  background-position: center;
 }
 .banner .box {
   display: flex;
@@ -113,6 +113,10 @@ body {
   padding: 80px 0;
   background-color: rgba(33, 76, 106, 0.2);
 }
+.presentation .layui-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .presentation .image {
   display: flex;
   justify-content: center;
@@ -123,6 +127,7 @@ body {
 .presentation .image img {
   margin: 0 auto;
   border-radius: 100%;
+  width: 100%;
 }
 .presentation .desc {
   padding: 20px;
@@ -179,6 +184,10 @@ body {
   background-attachment: fixed;
   padding: 40px;
 }
+.project .title {
+  text-align: center;
+  color: #fff;
+}
 .project .list {
   display: flex;
   justify-content: space-between;
@@ -186,28 +195,105 @@ body {
   flex-wrap: wrap;
 }
 .project .list .item {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 450px;
   cursor: pointer;
   margin-bottom: 40px;
 }
-.project .list .item img {
+.project .list .item .box {
+  /* flex布局下元素不按比例缩放 */
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  background-color: #7591AD;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex 子元素 纵向排列 */
+  flex-direction: column;
+  /* 增加个阴影 */
+  box-shadow: 0 0 30px #2c2c2c;
+  /* 同意给字体价格颜色 */
+  color: #e8f6fd;
+}
+.project .list .item .box .photo {
+  position: absolute;
+  /* 默认为放大 */
   width: 100%;
   height: 100%;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: gray;
+  top: 0px;
+  border-radius: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: #fff;
 }
-.project .list .item img:hover {
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  filter: grayscale(0%);
-  filter: unset;
+.project .list .item .box .photo img {
+  /* 图片高宽均为100% */
+  /* 然后按照cover缩放，裁切长边 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project .list .item .box .photo::before {
+  /* 通过before增加渐变背景实现遮罩，让文字默认看起来清晰一些 */
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #333, transparent);
+}
+.project .list .item .box h1 {
+  position: absolute;
+  top: 88%;
+  transition: 0.5s;
+}
+.project .list .item .box h3 {
+  margin-top: 220px;
+  width: 80%;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #8ea2b8;
+}
+.project .list .item .box p {
+  width: 90%;
+  /* 段落缩进2个字符大小 */
+  text-indent: 2em;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 26px;
+}
+.project .list .item .box a {
+  color: #e8f6fd;
+  text-decoration: none;
+  padding: 12px 36px;
+  border: 1px solid #86a3b3;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.project .list .item .box a:hover {
+  color: #Fff;
+  background-color: #86a3b3;
+}
+.project .list .item .box:hover .photo {
+  /* 鼠标移上变小 */
+  width: 120px;
+  height: 120px;
+  top: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #111;
+}
+.project .list .item .box:hover .photo::before {
+  /* 缩小时隐藏 */
+  display: none;
+}
+.project .list .item .box:hover h1 {
+  position: absolute;
+  top: 150px;
 }
 /******************轮播***************************/
 .lunbo {
@@ -267,9 +353,6 @@ body {
   margin: 10px 0;
   padding-bottom: 10px;
   font-weight: normal;
-}
-#mobile-nav .nav .item:hover {
-  color: ;
 }
 #mobile-nav.active {
   top: 0;

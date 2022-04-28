@@ -1,0 +1,259 @@
+:root {
+    --background-color: #2c3e50;
+    --border-color: #7591AD;
+    --text-color: #34495e;
+    --color1: #EC3E27;
+    --color2: #fd79a8;
+    --color3: #0984e3;
+    --color4: #00b894;
+    --color5: #fdcb6e;
+    --color6: #e056fd;
+    --color7: #F97F51;
+    --color8: #BDC581;
+    --a_border_color: #86a3b3;
+    --h2_border_color: #8ea2b8;
+    --a_hover_background_color: #86a3b3;
+    --font_color: #e8f6fd;
+}
+ body{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+ }
+
+ 
+.box1 {
+    /* flex布局下元素不按比例缩放 */
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    margin: 20px;
+    background-color: #7591AD;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex 子元素 纵向排列 */
+    flex-direction: column;
+    /* 增加个阴影 */
+    box-shadow: 0 0 30px #2c2c2c;
+    /* 同意给字体价格颜色 */
+    color: #e8f6fd;
+
+    .photo {
+        position: absolute;
+        /* 默认为放大 */
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        border-radius: 0%;
+        overflow: hidden;
+        transition: 0.5s;
+        background-color: #fff;
+
+        img{
+             /* 图片高宽均为100% */
+            /* 然后按照cover缩放，裁切长边 */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::before{
+             /* 通过before增加渐变背景实现遮罩，让文字默认看起来清晰一些 */
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #333, transparent);
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 380px;
+        transition: 0.5s;
+    }
+
+    h3 {
+        margin-top: 220px;
+        width: 80%;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #8ea2b8;
+    }
+    
+    p {
+        width: 90%;
+        /* 段落缩进2个字符大小 */
+        text-indent: 2em;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 26px;
+    }
+    
+    a {
+        color: #e8f6fd;
+        text-decoration: none;
+        padding: 12px 36px;
+        border: 1px solid #86a3b3;
+        border-radius: 8px;
+        &:hover {
+            color: #Fff;
+            background-color: #86a3b3;
+        }
+    }
+    &:hover{
+        .photo{
+            /* 鼠标移上变小 */
+            width: 120px;
+            height: 120px;
+            top: 30px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #111;
+        }
+        .photo::before{
+            /* 缩小时隐藏 */
+            display: none;
+        }
+        h1 {
+            position: absolute;
+            top: 140px;
+        }
+    }
+}
+
+ .box2{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    /* 这我们做个圆角 */
+    border-radius: 30px;
+    /* 来个阴影效果更好 */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .4);
+    overflow: hidden;
+    /* 这里用背景图实现，正常应该用img标签显示图片 */
+    // background-image: url(../images/1.png);
+    // background-position: center;
+    // background-size: cover;
+    img{
+        width: 100%;
+    }
+
+    h2{
+        position: absolute;
+        font-size: 30px;
+        font-weight: bold;
+        color: #FFF;
+        top: 40px;
+        left: 30px;
+        text-shadow: rgba(0, 0, 0, .4) 2px 2px 2px;
+        transition: 0.5s;
+    }
+
+    .share {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-right: 30px;
+        top: 100%;
+        /* 通过调整背景色透明度让背景透明 */
+        background-color: rgba(255, 255, 255, .85);
+        /* 这会让整个层和内部元素全部透明 */
+        /* opacity: 0.85; */
+        /* flex 布局 让图标靠右上角 */
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        /* 让旋转的圆心点在左上角 */
+        transform-origin: left top;
+        transition: 0.5s;
+    }
+
+    &:hover{
+        h2{
+            transform: translateY(-14px);
+        }
+        .share{
+             /* 倾斜-15度 */
+            transform: rotate(-15deg) translateY(-14px);
+            /* 增加个阴影 */
+            box-shadow: -10px -10px 100px #000;
+        }
+
+        .icon{
+            transform: rotate(18deg);
+        }
+    }
+ }
+
+.box3{ 
+    /*内容盒子*/
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px 0px;
+    perspective: 1000px;
+    overflow: hidden; /*超出隐藏*/
+    transform-style: perserve-3d;
+    .imgBx{ /*盒子内图片*/
+        position: absolute;
+        top: 0; /*距上部*/
+        left: 0; /*距左部*/
+        width: 100%;
+        height: 100%;
+        transform-origin: top; /*3D起始位置*/
+        transform-style: preserve-3d; /*子元素保留3D*/
+        transition: 0.5s; /**/
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*图片大小为适应布局*/
+            transition-delay: 0.2s;
+        }
+    }
+    .contentBx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #333; /*背景颜色*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        transform-origin: bottom;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+        transform: rotateX(90deg);
+        opacity: 0;
+        color: #fff; /*字体颜色*/
+    }
+    &:hover {
+        .imgBx{ /*图片悬停时*/
+            transition-delay: 0s; /*过渡从何开始（等待秒数）*/
+            transform: rotateX(-90deg); /*X轴旋转*/
+            opacity: 0; /*透明度*/
+        }
+        .contentBx{
+            transform: rotateX(0deg);
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+    }
+    
+}
+
+
+

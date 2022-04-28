@@ -1,0 +1,82 @@
+@media screen and (max-width: 768px) {
+  #header {
+    position: fixed !important;
+    top: -362px;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 6px !important;
+    animation: none !important;
+    transition: 0.5s;
+  }
+  #header .logo {
+    display: none;
+  }
+  #header .nav {
+    margin-top: 42px;
+    flex-direction: column;
+    width: 80%;
+  }
+  #header .nav .item {
+    border-bottom: 1px solid #aaa;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    font-weight: normal;
+  }
+  #header .btn {
+    border-radius: 0;
+    width: 80%;
+    text-align: center;
+  }
+  #header.active {
+    top: 0;
+  }
+  #mobile-btn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    top: 4%;
+    left: 10px;
+  }
+  #mobile-btn .line {
+    position: absolute;
+    left: 20%;
+    transition: 0.5s;
+    transform-origin: left;
+    width: 22px;
+    height: 3px;
+    background-color: #333;
+  }
+  #mobile-btn .line.one {
+    top: 30%;
+  }
+  #mobile-btn .line.two {
+    top: 50%;
+  }
+  #mobile-btn .line.three {
+    top: 70%;
+  }
+  #mobile-btn.active .line.one {
+    transform: rotate(45deg);
+  }
+  #mobile-btn.active .line.two {
+    opacity: 0;
+  }
+  #mobile-btn.active .line.three {
+    transform: rotate(-45deg);
+  }
+  #banner .image-bg {
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #banner .image-bg .content .box {
+    justify-content: start;
+  }
+  #banner .image-bg .content .box .desc {
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+  }
+}
